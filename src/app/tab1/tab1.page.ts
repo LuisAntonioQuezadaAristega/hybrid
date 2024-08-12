@@ -47,8 +47,8 @@ export class Tab1Page {
 
   onSubmit(): void {
     this.dataProvider.postResponse(this.checkoutForm.value).subscribe( (response) => {
-            this.checkoutForm.reset();
-            this.loadData()
+      this.checkoutForm.reset();
+      this.loadData()
     })
   }
 
