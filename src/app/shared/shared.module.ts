@@ -23,7 +23,7 @@ import { LogoComponent } from './logo/logo.component';
     CommonModule, 
     IonicModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
   ]
 })
 export class SharedModule { }

@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, FormsModule, Validators } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonIcon, IonTitle, IonToolbar, IonButton } from '@ionic/angular/standalone';
 import { SharedModule } from '../shared/shared.module';
+import { addIcons } from 'ionicons';
+import { mailOutline,  lockClosedOutline, eyeOffOutline, eyeOutline} from 'ionicons/icons';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, SharedModule]
+  imports: [IonButton,  IonIcon, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, SharedModule, RouterLink]
 })
 export class LoginPage implements OnInit {
   form = new FormGroup({
@@ -17,9 +20,15 @@ export class LoginPage implements OnInit {
     password: new FormControl('', [Validators.required])
   })
 
-  constructor() { }
+  constructor() { 
+    addIcons({mailOutline, lockClosedOutline, eyeOffOutline, eyeOutline}); }
 
   ngOnInit() {
+  }
+
+
+  submit(){
+    console.log(this.form.value);
   }
 
 }

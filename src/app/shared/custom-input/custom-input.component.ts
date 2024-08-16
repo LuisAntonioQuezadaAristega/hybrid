@@ -1,6 +1,9 @@
 import { Component, input, Input, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
+import { eyeOffOutline, eyeOutline} from 'ionicons/icons';
+
+
 @Component({
   selector: 'app-custom-input',
   templateUrl: './custom-input.component.html',
@@ -16,9 +19,15 @@ export class CustomInputComponent  implements OnInit {
   isPassword!: boolean;
   hide: boolean = true;
 
-  constructor() { }
+  constructor(
 
-  ngOnInit() {}
+  ) { 
+    
+  }
+
+  ngOnInit() {
+    if (this.type == 'password') this.isPassword = true;
+  }
 
   showOrHidePassword(){
     this.hide = !this.hide;
