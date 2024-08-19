@@ -1,0 +1,98 @@
+<div class="centrar">
+
+<ion-content [fullscreen]="true" class="ion-padding" scroll-y="false">
+  @if(index == 0){
+    <ion-toolbar>
+      <ion-title>
+        <h1>¿Qué deporte vas a practicar?</h1>
+      </ion-title>
+    </ion-toolbar>
+
+    <ion-button shape="circle" size="large" (click)="showSport(1)">
+      <ion-icon name="football" slot="icon-only"></ion-icon>
+    </ion-button>
+  
+
+    <ion-button shape="circle" size="large" (click)="showSport(2)">
+      <ion-icon name="basketball"></ion-icon>
+    </ion-button>
+  
+    <br>
+
+    <ion-button shape="circle" size="large" (click)="showSport(3)">
+      <ion-icon name="tennisball"></ion-icon>
+    </ion-button>
+
+    <ion-button shape="circle" size="large" (click)="showSport(4)">
+      <ion-icon name="bicycle"></ion-icon>
+    </ion-button>
+
+    <br>
+
+    <ion-button shape="circle" size="large" (click)="showSport(5)">
+      <ion-icon name="walk"></ion-icon>
+    </ion-button>
+
+    <ion-button shape="circle" size="large" (click)="showSport(6)">
+      <ion-icon name="baseball"></ion-icon>
+    </ion-button>
+
+    <br>
+  }@else{
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button default-href="/tabSport" (click)="regresar()"></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+        <h1>¿Sabías Qué?</h1>
+      </ion-title>
+    </ion-toolbar>
+
+    <img src={{imagesSRC[index-1]}} height="440">
+    @if(index == 1){
+      <p>Los futbolistas pasan muchas horas entrenando y jugando al aire libre,
+        lo que los expone significativamente a los rayos UV. Esta exposición
+        prolongada puede aumentar el riesgo de desarrollar cáncer de piel,
+        incluyendo melanomas y carcinomas basocelulares.</p>
+    }
+    @if(index == 2){
+      <p>Los jugadores de baloncesto que entrenan y juegan en canchas exteriores
+        están en riesgo de sufrir quemaduras solares, especialmente en los brazos,
+        cara y cuello. Las quemaduras solares frecuentes pueden causar daño
+        permanente a la piel y aumentar el riesgo de cáncer de piel a largo plazo.
+    }
+    @if(index == 3){
+      <p>Los jugadores de tenis que entrenan y juegan en canchas exteriores están
+        en riesgo de sufrir quemaduras solares, especialmente en los brazos, cara
+        y cuello. Las quemaduras solares frecuentes pueden causar daño permanente
+        a la piel y aumentar el riesgo de cáncer de piel a largo plazo.</p>
+    }
+    @if(index == 4){
+      <p>Los ciclistas pasan largos periodos al aire libre y en movimiento, lo que
+        los expone no solo a la radiación directa del sol, sino también a la
+        radiación reflejada por las carreteras. Esto puede causar daños a los ojos,
+        incluyendo cataratas y degeneración macular, si no se protegen adecuadamente
+        con gafas UV.</p>
+    }
+    @if(index == 5){
+      <p>Los atletas que entrenan y compiten al aire libre están expuestos a la
+        radiación solar directa, lo que puede causar hiperpigmentación. Esto se
+        manifiesta como manchas oscuras o irregulares en la piel, y es más común
+        en áreas que reciben más sol, como el rostro y los brazos.</p>
+    }
+    @if(index == 6){
+      <p>Los jugadores de béisbol que entrenan y juegan en canchas exteriores están
+        en riesgo de sufrir quemaduras solares, especialmente en los brazos, cara y
+        cuello. Las quemaduras solares frecuentes pueden causar daño permanente a la
+        piel y aumentar el riesgo de cáncer de piel a largo plazo.</p>
+    }
+  }
+  
+  <a href="/home">
+    <ion-button shape="round" id="continue">
+      <h1>Continuar</h1>
+    </ion-button>
+  </a>
+
+</ion-content>
+</div>
