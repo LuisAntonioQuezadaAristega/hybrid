@@ -20,6 +20,10 @@ export const routes: Routes = [
   {
     path: 'tabSport',
     loadComponent: () => import('./tabSport/tabSport.page').then( m => m.tabSport)
+  },
+  {
+    path: 'articles',
+    loadComponent: () => import('./articles/articles.page').then( m => m.articles)
   }
 
   
