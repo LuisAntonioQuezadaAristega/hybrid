@@ -24,7 +24,11 @@ export const routes: Routes = [
   {
     path: 'articles',
     loadComponent: () => import('./articles/articles.page').then( m => m.articles)
-  }
+  },
+  {
+    path: 'scanner',
+    loadComponent: () => import('./scanner/scanner.page').then( m => m.scanner)
+  },
 
   
 ];

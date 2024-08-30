@@ -92,7 +92,11 @@ export class PhotoService {
 
     /* 5. Agregue el archivo al inicio del arreglo */
     const savedImageFile = await this.savePicture(capturedPhoto);
-    this.photos.unshift(savedImageFile);
+    if(this.photos.length){
+      this.photos[0] = savedImageFile
+    }else{
+      this.photos.unshift(savedImageFile);
+    }
     Preferences.set({
       key: this.PHOTO_STORAGE,
       value: JSON.stringify(this.photos),
