@@ -8,7 +8,7 @@ import { PhotoService } from '../services/photo.service';
 import { ExploreContainerComponent } from '../explore-container/explore-container.component';
 
 import { addIcons } from 'ionicons';
-import { checkmarkCircle, camera, alertCircle } from 'ionicons/icons';
+import { checkmarkCircle, camera, alertCircle, homeSharp } from 'ionicons/icons';
 
 //import { Data } from '../interfaces/data';
 
@@ -30,7 +30,7 @@ export class scanner {
   public environmentInjector = inject(EnvironmentInjector);
 
   constructor(public photoService: PhotoService) {
-    addIcons({checkmarkCircle, camera, alertCircle });
+    addIcons({checkmarkCircle, camera, alertCircle, homeSharp });
   }
 
   addPhotoToGallery() {

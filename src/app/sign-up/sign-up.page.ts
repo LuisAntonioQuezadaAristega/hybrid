@@ -7,6 +7,8 @@ import { User } from '../interfaces/user';
 import { FirebaseService } from '../services/firebase.service';
 import { ExploreContainerComponent } from '../explore-container/explore-container.component';
 import { HttpClientModule } from '@angular/common/http';
+import { eyeOffOutline, eyeOutline, lockClosedOutline, mailOutline } from 'ionicons/icons';
+import { addIcons } from 'ionicons';
 
 @Component({
   selector: 'app-sign-up',
@@ -22,15 +24,20 @@ import { HttpClientModule } from '@angular/common/http';
 export class SignUpPage implements OnInit {
   public userData: User;
   public users: User[] = [];
+  public isClicked = false;
 
   form = new FormGroup({
     name: new FormControl('',[Validators.required]),
     email: new FormControl('',[Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required])
   })
+  
 
 
-  constructor(private firebaseSvc: FirebaseService) { }
+  constructor(private firebaseSvc: FirebaseService) { 
+    addIcons({mailOutline, lockClosedOutline, eyeOffOutline, eyeOutline}); 
+  }
+  
 
   ngOnInit() {
   }
@@ -39,6 +46,10 @@ export class SignUpPage implements OnInit {
     this.firebaseSvc.postResponse(this.form.value).subscribe( (response) => {
       
     })
+  }
+
+  changeColor() {
+    this.isClicked = !this.isClicked;
   }
 
 }

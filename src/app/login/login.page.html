@@ -26,16 +26,17 @@
         <div *ngIf="form.controls.password.errors?.['required']" ><p class="d-flex justify-content-center">La contrasena es requerida</p></div>
       </div>
 
-      <p routerLink="../password" class="ion-text-end">Olvivaste tu contrasena?</p>
-
+      
       <ion-button expand="block" node="ios" class="submit" type="submit">
         Iniciar Sesion
       </ion-button>
 
-      <ion-button routerLink='../sign-up' expand="block" node="ios" fill="outline" class="ion-margin-top" >
-        Registrarse
-      </ion-button>
-  
+      <a href="../sign-up/">
+        <ion-button  expand="block" node="ios" fill="outline" class="ion-margin-top"  >
+          Registrarse
+        </ion-button>
+      </a>
+      
     </form>
 
   </div>

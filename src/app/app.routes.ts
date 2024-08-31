@@ -28,13 +28,15 @@ export const routes: Routes = [
   {
     path: 'password-reset',
     loadComponent: () => import('./password/password.page').then( m => m.PasswordPage)
-  }
-
   },
   {
     path: 'scanner',
     loadComponent: () => import('./scanner/scanner.page').then( m => m.scanner)
+  },  {
+    path: 'recomendations',
+    loadComponent: () => import('./recomendations/recomendations.page').then( m => m.RecomendationsPage)
   },
+
 
   
 ];

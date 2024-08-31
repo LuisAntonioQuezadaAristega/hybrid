@@ -1,13 +1,15 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>sign-up</ion-title>
+    <ion-title>Registrate</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <h2 class = "d-flex justify-content-center">Bienvenido a</h2>
   <h1 class = "d-flex justify-content-center">SOLAR</h1>
   <h1 class="d-flex justify-content-center">SAFETY</h1>
-  <img src = "../../assets/images/logo.png" class="mx-auto d-block w-75">
+  <img src = "../../assets/images/logo.png" class="mx-auto d-block " style="width: 200px; height: auto;">
+  <h2 class = "d-flex justify-content-center">Ingresa tus datos</h2>
   <div class="d-flex justify-content-center">
     <form [formGroup]= "form" class="login-form" (ngSubmit)="submit()" (keypress.enter)="submit()">
       <app-custom-input 
@@ -42,16 +44,18 @@
       <div class = "validators" *ngIf="form.controls.password.errors && form.controls.password.touched">
         <div *ngIf="form.controls.password.errors?.['required']" ><p class="d-flex justify-content-center">La contrasena es requerida</p></div>
       </div>
-
-      <p routerLink="../password" class="ion-text-end">Olvivaste tu contrasena?</p>
-
-      <ion-button expand="block" node="ios" class="submit" type="submit">
-        Iniciar Sesion
-      </ion-button>
-
-      <ion-button routerLink='../sign-up' expand="block" node="ios" fill="outline" class="ion-margin-top" >
+      
+      <ion-button expand="block" node="ios" class="submit" type="submit" [ngStyle]="{'background-color': isClicked ? 'green' : 'gray', 'color': isClicked ? 'white' : 'black'}"
+      (click)="changeColor()">
         Registrarse
       </ion-button>
+      
+
+      <a href="../login">
+      <ion-button routerLink=\ expand="block" node="ios" fill="outline" class="ion-margin-top" >
+        Volver al Login
+      </ion-button>
+    </a>
   
     </form>
 
