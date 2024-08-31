@@ -24,7 +24,10 @@ export const routes: Routes = [
   {
     path: 'articles',
     loadComponent: () => import('./articles/articles.page').then( m => m.articles)
+  },
+  {
+    path: 'password-reset',
+    loadComponent: () => import('./password/password.page').then( m => m.PasswordPage)
   }
 
-  
 ];

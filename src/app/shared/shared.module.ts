@@ -24,6 +24,7 @@ import { LogoComponent } from './logo/logo.component';
     IonicModule,
     ReactiveFormsModule,
     FormsModule,
+    
   ]
 })
 export class SharedModule { }
