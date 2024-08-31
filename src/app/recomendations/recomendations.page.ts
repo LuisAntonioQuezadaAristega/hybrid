@@ -11,7 +11,7 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonCardHeader, Io
   imports: [IonButtons, IonBackButton, IonCardHeader, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule,IonCard, IonCardHeader, IonCardTitle, IonCardContent],
 })
 export class RecomendationsPage implements OnInit {
-  public index = Math.floor(Math.random() * 4);
+  public index = Math.floor(Math.random() * 6);
 
   constructor() { }
 

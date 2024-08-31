@@ -7,7 +7,7 @@ import { User } from '../interfaces/user';
 import { FirebaseService } from '../services/firebase.service';
 import { ExploreContainerComponent } from '../explore-container/explore-container.component';
 import { HttpClientModule } from '@angular/common/http';
-import { eyeOffOutline, eyeOutline, lockClosedOutline, mailOutline } from 'ionicons/icons';
+import { eyeOffOutline, eyeOutline, lockClosedOutline, mailOutline, personOutline } from 'ionicons/icons';
 import { addIcons } from 'ionicons';
 
 @Component({
@@ -35,7 +35,7 @@ export class SignUpPage implements OnInit {
 
 
   constructor(private firebaseSvc: FirebaseService) { 
-    addIcons({mailOutline, lockClosedOutline, eyeOffOutline, eyeOutline}); 
+    addIcons({mailOutline, lockClosedOutline, eyeOffOutline, eyeOutline, personOutline}); 
   }
   
 

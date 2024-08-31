@@ -3,7 +3,8 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./tabs/tabs.routes').then((m) => m.routes),
+    redirectTo: 'login',
+    pathMatch: 'full'
   },
   {
     path: 'login',
@@ -32,11 +33,14 @@ export const routes: Routes = [
   {
     path: 'scanner',
     loadComponent: () => import('./scanner/scanner.page').then( m => m.scanner)
-  },  {
+  },{
     path: 'recomendations',
     loadComponent: () => import('./recomendations/recomendations.page').then( m => m.RecomendationsPage)
   },
-
+  {
+    path: '**', 
+    redirectTo: 'login'
+  }
 
   
 ];
