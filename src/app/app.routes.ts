@@ -30,4 +30,11 @@ export const routes: Routes = [
     loadComponent: () => import('./password/password.page').then( m => m.PasswordPage)
   }
 
+  },
+  {
+    path: 'scanner',
+    loadComponent: () => import('./scanner/scanner.page').then( m => m.scanner)
+  },
+
+  
 ];

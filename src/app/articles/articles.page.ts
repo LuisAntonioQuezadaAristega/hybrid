@@ -35,9 +35,9 @@ export class articles {
     {imagen:"../../assets/images/baseball.png", titulo:"afnefnwole", texto:"vsfvsfvfs"}]*/
 
   aritculoInfo:any[] = [
-    {"color":"blue", "imagen":"../../assets/images/fotoenvejecimiento.jpg", "titulo":"¿Qué ocasiona el melasma en la piel?"},
-    {"color":"white", "imagen":"../../assets/images/fotoenvejecimiento.jpg", "titulo":"¿Lunares por la exposición solar?"},
-    {"color":"blue", "imagen":"../../assets/images/fotoenvejecimiento.jpg", "titulo":"Tipos de quemaduras solares existentes"},
+    {"color":"blue", "imagen":"../../assets/images/melasma.jpg", "titulo":"¿Qué ocasiona el melasma en la piel?"},
+    {"color":"white", "imagen":"../../assets/images/lunar.png", "titulo":"¿Lunares por la exposición solar?"},
+    {"color":"blue", "imagen":"../../assets/images/quemaduras.jpg", "titulo":"Tipos de quemaduras solares existentes"},
     {"color":"white", "imagen":"../../assets/images/fotoenvejecimiento.jpg", "titulo":"¿Qué es el fotoenvejecimiento?"}
   ]
 
