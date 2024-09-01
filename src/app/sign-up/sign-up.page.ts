@@ -25,6 +25,8 @@ export class SignUpPage implements OnInit {
   public userData: User;
   public users: User[] = [];
   public isClicked = false;
+  public errorMessage = '';
+  public message = '';
 
   form = new FormGroup({
     name: new FormControl('',[Validators.required]),
@@ -43,9 +45,16 @@ export class SignUpPage implements OnInit {
   }
 
   submit(): void{
-    this.firebaseSvc.postResponse(this.form.value).subscribe( (response) => {
+    if (this.form.valid) {
+      this.errorMessage = '';
+      this.message = '¡Registro exitoso!';
+      this.firebaseSvc.postResponse(this.form.value).subscribe(response => {
+      });
       
-    })
+    } else {
+      this.message = '';
+      this.errorMessage = 'Asegúrate de llenar todos los campos correctamente'; 
+    }
   }
 
   changeColor() {
