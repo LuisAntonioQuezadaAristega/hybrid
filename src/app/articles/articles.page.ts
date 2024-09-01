@@ -1,13 +1,12 @@
 import { Component, EnvironmentInjector, inject } from '@angular/core';
-import {IonToolbar, IonTitle, IonContent, IonCard, IonCardHeader, IonCardContent ,IonButton, IonButtons, IonBackButton} from '@ionic/angular/standalone';
-
+import {IonToolbar, IonTitle, IonHeader, IonContent, IonCard, IonCardHeader, IonCardContent ,IonButton, IonButtons, IonBackButton} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-articles',
   templateUrl: './articles.page.html',
   styleUrls: ['./articles.page.scss'],
   standalone: true,
-  imports: [IonToolbar, IonTitle, IonContent, IonCard, IonCardHeader, IonCardContent, IonButton, IonButtons, IonBackButton],
+  imports: [IonToolbar, IonTitle, IonHeader, IonContent, IonCard, IonCardHeader, IonCardContent, IonButton, IonButtons, IonBackButton],
 })
 
 export class articles {
