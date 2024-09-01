@@ -7,6 +7,19 @@ ion-toolbar{
   color: white;
 }
 
+ion-card-content{
+  text-align: justify;
+}
+
+ion-card-content > h2{
+  color: #2260FF;
+  font-weight: bold;
+}
+
+ion-card-content > p{
+  color: black;
+}
+
 ion-icon {
   width: 125px;
   height: 125px;
@@ -26,6 +39,11 @@ section#imagen{
 
 section#texto{
   grid-area: "B";
+  font-weight: bold;
+}
+
+#tituloArticulo{
+  font-weight: bold;
 }
 
 p#ver{

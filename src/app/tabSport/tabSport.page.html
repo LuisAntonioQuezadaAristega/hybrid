@@ -49,43 +49,7 @@
     </ion-toolbar>
 
     <img src={{imagesSRC[index-1]}} height="440">
-    @if(index == 1){
-      <p>Los futbolistas pasan muchas horas entrenando y jugando al aire libre,
-        lo que los expone significativamente a los rayos UV. Esta exposición
-        prolongada puede aumentar el riesgo de desarrollar cáncer de piel,
-        incluyendo melanomas y carcinomas basocelulares.</p>
-    }
-    @if(index == 2){
-      <p>Los jugadores de baloncesto que entrenan y juegan en canchas exteriores
-        están en riesgo de sufrir quemaduras solares, especialmente en los brazos,
-        cara y cuello. Las quemaduras solares frecuentes pueden causar daño
-        permanente a la piel y aumentar el riesgo de cáncer de piel a largo plazo.
-    }
-    @if(index == 3){
-      <p>Los jugadores de tenis que entrenan y juegan en canchas exteriores están
-        en riesgo de sufrir quemaduras solares, especialmente en los brazos, cara
-        y cuello. Las quemaduras solares frecuentes pueden causar daño permanente
-        a la piel y aumentar el riesgo de cáncer de piel a largo plazo.</p>
-    }
-    @if(index == 4){
-      <p>Los ciclistas pasan largos periodos al aire libre y en movimiento, lo que
-        los expone no solo a la radiación directa del sol, sino también a la
-        radiación reflejada por las carreteras. Esto puede causar daños a los ojos,
-        incluyendo cataratas y degeneración macular, si no se protegen adecuadamente
-        con gafas UV.</p>
-    }
-    @if(index == 5){
-      <p>Los atletas que entrenan y compiten al aire libre están expuestos a la
-        radiación solar directa, lo que puede causar hiperpigmentación. Esto se
-        manifiesta como manchas oscuras o irregulares en la piel, y es más común
-        en áreas que reciben más sol, como el rostro y los brazos.</p>
-    }
-    @if(index == 6){
-      <p>Los jugadores de béisbol que entrenan y juegan en canchas exteriores están
-        en riesgo de sufrir quemaduras solares, especialmente en los brazos, cara y
-        cuello. Las quemaduras solares frecuentes pueden causar daño permanente a la
-        piel y aumentar el riesgo de cáncer de piel a largo plazo.</p>
-    }
+    <p>{{textos[index-1]}}</p>
   }
   
   <a href="../home">

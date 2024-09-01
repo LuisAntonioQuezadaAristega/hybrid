@@ -66,7 +66,7 @@ export class LoginPage implements OnInit {
         localStorage.setItem('user', userExists.name);
         
         this.routerLink.navigate(['../tabSport']);
-
+        this.routerLink.ngOnDestroy()
 
       } else {
         console.error('Credenciales incorrectas');

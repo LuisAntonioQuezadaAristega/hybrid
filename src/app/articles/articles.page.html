@@ -1,6 +1,6 @@
 <div class="centrar">
 
-<ion-content [fullscreen]="true" class="ion-padding" scroll-y="false">
+<ion-content [fullscreen]="true" class="ion-padding">
   @if(index == 0){
     <ion-toolbar color="#2260FF">
       <ion-buttons slot="start">
@@ -63,90 +63,21 @@
       </ion-title>
     </ion-toolbar>
 
-    <h1>{{aritculoInfo[index-1].titulo}}</h1>
-    <img src={{aritculoInfo[index-1].imagen}} height="100">
-    @if(index == 1){
-      <p>
-      El melasma se caracteriza por placas de pigmentación de color marrón oscuro que aparecen sobre áreas de piel expuestas al
-      sol, por lo general en la cara.
-      </p>
-      <br>
-      <p>
-        Aparecen en la piel áreas irregulares, parcheadas, de color oscuro, generalmente en ambos lados de la cara. La pigmentación
-        se produce con más frecuencia en el centro de la cara y en las mejillas, la frente, las sienes, el labio superior y la nariz.
-        Algunas veces las placas aparecen solo en los lados de la cara. Con muy poca frecuencia, el melasma aparece en los antebrazos.
-        Las placas no causan picor ni duelen, y solo son un problema estético.
-      </p>
-      <br>
-      <p>
-        Los tratamientos aplicados a la piel son efectivos solo si la hiperpigmentación afecta las capas superiores de la piel.
-        Las cremas blanqueantes de la piel que contienen hidroquinona, tretinoína o un corticoesteroide se pueden usar en combinación
-        para ayudar a aclarar las manchas oscuras. Sin embargo, la hidroquinona debe utilizarse solo bajo control médico, ya que su
-        uso a largo plazo puede a veces causar una forma permanente de hiperpigmentación. Se puede usar una crema que contenga ácido
-        azelaico en lugar de hidroquinona o bien se puede combinar dicha crema con ácido azelaico con hidroquinona, con tretinoína o con ambas.
-      </p>
-    }
-    @if(index == 2){
-      <p>
-        Los lunares (o nevos) deben controlarse al menos una vez por año. Hay que tener presente ciertas características para analizar las
-        lesiones de mayor riesgo: asimetría, bordes irregulares, varios colores, diámetro mayor a 6 milímetros (mm) y evolución o cambios en el tiempo.
-      </p>
-      <br>
-      <p>
-        “El cáncer de piel se presenta de distintas maneras, no solamente los lunares con sus características de sospecha ya descritos, sino otras lesiones
-        nuevas rojo-rosadas, que crecen, pican, se lastiman y no curan. En general se ubican en zonas expuestas al sol crónicamente”, explicó la especialista.
-      </p>
-      <br>
-      <p>
-        En esa línea determinó que los lunares se extirpan únicamente ante sospecha de malignidad, no se sacan por “prevención”.
-      </p>
-      <br>
-      <p>
-        Todas las personas tienen una carga genética de la cantidad y el tipo de lunares que tienen en la vida. Lo que sí se modifica es el daño genético que
-        se produce en las pieles no protegidas de los rayos ultravioletas.
-      </p>
-    }
-    @if(index == 3){
-      <p>
-        Esta es una de las épocas del año en la que más quemaduras solares en la piel se registran, ya que aumentan las visitas a playas o piscinas. Estas
-        quemaduras se manifiestan con el enrojecimiento de la piel, molestias estomacales, dolor, inflamación, ardor, escalofríos o cefalea si la quemadura
-        solar ha sido muy grave.
-      </p>
-      <br>
-      <h2>Grados de quemadura solar</h2>
-      <p>
-        Quemadura de primer grado: afecta a la epidermis, capa externa de la piel. Provoca enrojecimiento, tirantez, quemazón y dolor.
-      </p>
-      <br>
-      <p>
-        Quemadura de segundo grado: afecta a la epidermis y a ciertas capas internas. Provoca enrojecimiento, dolor, inflamación y ampollas.
-      </p>
-      <br>
-      <p>
-        Quemadura de tercer grado: afecta a las 3 capas de la piel, no suele ser dolorosa porque la transmisión de la sensación de calor se altera. Se aprecia
-        en la piel un tono oscuro la mayoría de veces y en otras ocasiones se aprecia un tono blanquecino.
-      </p>
-    }
-    @if(index == 4){
-      <p>
-      En ISDIN, hablamos mucho de fotoenvejecimiento. De hecho, nos consideramos expertos en la materia.
-      Pero, ¿qué es exactamente? La pista te la dará el prefijo “foto-”, es decir, “relativo a la luz”.
-      En este caso, la luz UV que emite el sol. “El fotoenvejecimiento o photoaging se refiere al proceso
-      por el que la radiación solar acelera los signos de envejecimiento de la piel, como manchas solares
-      y líneas de expresión,” – comparte la Dra. Aurora Garre,  ISDIN Medical Director. Y acelera el envejecimiento
-      mucho más que cualquier otro factor externo.
-      </p>
-      <br>
-      <p>
-      Afortunadamente, hay cuatro cosas claves que podemos hacer para cuidar de nuestra piel y posponer el
-      fotoenvejecimiento. Lo crucial es integrar estos hábitos de fotoprotección (y cuanto antes, mejor).
-      </p>
-      <br>
-      <p>
-      Utiliza protección solar todos los días, Aplica tu fotoprotección correctamente, Evita las horas de más sol, 
-      Busca refugio en tu armario
-      </p>
-    }
+    <h1 id="tituloArticulo">{{aritculoInfo[index-1].titulo}}</h1>
+
+    <ion-card>
+      <ion-card-header>
+        <img src={{aritculoInfo[index-1].imagen}} width="400">
+      </ion-card-header>
+
+      <ion-card-content>
+        @for(detalle of detalles[index-1]; track detalle){
+          <br>
+          <h2>{{detalle["titulo"]}}</h2>
+          <p>{{detalle["texto"]}}</p>
+        }
+      </ion-card-content>
+    </ion-card>
   }
 
 </ion-content>

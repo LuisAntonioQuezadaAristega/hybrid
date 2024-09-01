@@ -1,27 +1,16 @@
 import { Component, EnvironmentInjector, inject} from '@angular/core';
-import { IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel, 
-  IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardHeader, 
-  IonCardSubtitle, IonCardTitle, IonCardContent ,IonButton, IonButtons, IonBackButton,
-  IonFab, IonFabButton, IonImg, IonCol, IonRow, IonGrid} from '@ionic/angular/standalone';
-import { CommonModule } from '@angular/common'
+import { IonIcon, IonToolbar, IonTitle, IonContent, IonButton, IonButtons, IonBackButton, IonImg, } from '@ionic/angular/standalone';
 import { PhotoService } from '../services/photo.service';
-import { ExploreContainerComponent } from '../explore-container/explore-container.component';
 
 import { addIcons } from 'ionicons';
-import { checkmarkCircle, camera, alertCircle, homeSharp } from 'ionicons/icons';
-
-//import { Data } from '../interfaces/data';
+import { checkmarkCircle, camera, alertCircle } from 'ionicons/icons';
 
 @Component({
   selector: 'app-scanner',
   templateUrl: './scanner.page.html',
   styleUrls: ['./scanner.page.scss'],
   standalone: true,
-  imports: [IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel, 
-    ExploreContainerComponent, IonHeader, IonToolbar, IonTitle, 
-    IonContent, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle,
-    IonCardContent, IonButton, IonButtons, IonBackButton, CommonModule,
-    CommonModule, IonFab, IonFabButton, IonIcon, IonImg, IonCol, IonRow, IonGrid],
+  imports: [IonIcon, IonToolbar, IonTitle, IonContent, IonButton, IonButtons, IonBackButton, IonIcon, IonImg,],
 })
 
 export class scanner {
@@ -30,7 +19,7 @@ export class scanner {
   public environmentInjector = inject(EnvironmentInjector);
 
   constructor(public photoService: PhotoService) {
-    addIcons({checkmarkCircle, camera, alertCircle, homeSharp });
+    addIcons({checkmarkCircle, camera, alertCircle });
   }
 
   addPhotoToGallery() {
